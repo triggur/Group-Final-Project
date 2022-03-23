@@ -1,7 +1,7 @@
 # Group-Final-Project
 The group project final for EMU Computer Game Programming.
 
-##Group Team 4 Members:
+## Group Team 4 Members:
 - Arieonna
 - Deren
 - Jacob
