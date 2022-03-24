@@ -23,8 +23,10 @@ public class Locomotion : MonoBehaviour
     public bool isSprinting;
     public bool isGrounded;
     public bool isJumping;
+    public bool isSneak;
 
     [Header("Movement Speeds")]
+    public float sneakSpeed = 2.5f;
     public float walkingSpeed = 1.5f;
     public float runningSpeed = 5;
     public float sprintingSpeed = 9;
@@ -69,9 +71,13 @@ public class Locomotion : MonoBehaviour
         moveDirection.Normalize();
         moveDirection.y = 0;
 
-        if(isSprinting)
+        if(isSprinting && !isSneak)
         {
             moveDirection *= sprintingSpeed;
+        }
+        else if (!isSprinting && isSneak)
+        {
+            moveDirection *= sneakSpeed;
         }
         else
         {
@@ -180,6 +186,23 @@ public class Locomotion : MonoBehaviour
             Vector3 playerVelocity = moveDirection;
             playerVelocity.y = jumpingVelocity;
             playerRigidBody.velocity = playerVelocity;
+        }
+    }
+
+    // Method to handle sneaking animations
+    public void HandleSneaking()
+    {
+        if(!isSprinting && isGrounded && !isJumping)
+        {
+            if(isSneak)
+            {
+                animationManager.animator.SetBool("isSneaking", true);
+            }
+            else
+            {
+                animationManager.animator.SetBool("isSneaking", false);
+            }
+            
         }
     }
 }

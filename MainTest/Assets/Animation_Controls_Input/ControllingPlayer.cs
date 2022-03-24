@@ -170,8 +170,8 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""RightStick"",
-                    ""id"": ""be6796be-df77-4c90-ad7b-a39da11a573a"",
-                    ""path"": ""2DVector(mode=2)"",
+                    ""id"": ""5a44bd7e-ae63-42ce-9deb-98b6c9dc06ac"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -181,7 +181,7 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""a92dacd7-6767-47cf-a714-16df2b93ed84"",
+                    ""id"": ""25053dc4-34c8-4e87-86fe-97670d5137e0"",
                     ""path"": ""<Gamepad>/rightStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -192,7 +192,7 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""c6ceca60-678b-4e7f-bd61-961b17cbc5e8"",
+                    ""id"": ""434c2c02-0565-405a-849b-63c54189bbfe"",
                     ""path"": ""<Gamepad>/rightStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -203,7 +203,7 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""dfc151d3-ee9c-4bfa-b3bd-c9def31ee1a0"",
+                    ""id"": ""50578736-969a-4264-852d-e0586f6fba2a"",
                     ""path"": ""<Gamepad>/rightStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -214,7 +214,7 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""6fcef392-e001-4ae3-bd2d-bdac0574367f"",
+                    ""id"": ""6ff9bc51-f759-4514-adf2-8c498695b861"",
                     ""path"": ""<Gamepad>/rightStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -222,28 +222,6 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                     ""action"": ""Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ad982d12-7453-4ec1-9ddf-2f7b019a0b42"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Camera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f41d0700-c5c2-49fd-9471-eab8237b5c0b"",
-                    ""path"": ""<XInputController>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Camera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -252,7 +230,7 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
             ""id"": ""ba207ac2-9cc8-4139-98c6-b3a27343ac25"",
             ""actions"": [
                 {
-                    ""name"": ""B"",
+                    ""name"": ""Sprint"",
                     ""type"": ""Button"",
                     ""id"": ""d47ff9db-bfdf-46e9-a452-5274a1a0a2ef"",
                     ""expectedControlType"": ""Button"",
@@ -268,17 +246,26 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sneak"",
+                    ""type"": ""Button"",
+                    ""id"": ""33c36724-e277-4dbf-8f07-20842bdbe6ad"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""1cbd0e3d-0c24-4234-b6bd-3c068338033c"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""B"",
+                    ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -289,7 +276,7 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""B"",
+                    ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -307,11 +294,33 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3fba9941-bdec-4340-9982-0b7b882cc2b0"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4fbbbd02-6f7d-423c-a1df-826ddff6287a"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sneak"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f280f2a-8bfe-46eb-8084-d2f9aaeb7f02"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sneak"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -326,8 +335,9 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
         m_PlayerMovement_Camera = m_PlayerMovement.FindAction("Camera", throwIfNotFound: true);
         // PlayerAction
         m_PlayerAction = asset.FindActionMap("PlayerAction", throwIfNotFound: true);
-        m_PlayerAction_B = m_PlayerAction.FindAction("B", throwIfNotFound: true);
+        m_PlayerAction_Sprint = m_PlayerAction.FindAction("Sprint", throwIfNotFound: true);
         m_PlayerAction_Jump = m_PlayerAction.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerAction_Sneak = m_PlayerAction.FindAction("Sneak", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -428,14 +438,16 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
     // PlayerAction
     private readonly InputActionMap m_PlayerAction;
     private IPlayerActionActions m_PlayerActionActionsCallbackInterface;
-    private readonly InputAction m_PlayerAction_B;
+    private readonly InputAction m_PlayerAction_Sprint;
     private readonly InputAction m_PlayerAction_Jump;
+    private readonly InputAction m_PlayerAction_Sneak;
     public struct PlayerActionActions
     {
         private @ControllingPlayer m_Wrapper;
         public PlayerActionActions(@ControllingPlayer wrapper) { m_Wrapper = wrapper; }
-        public InputAction @B => m_Wrapper.m_PlayerAction_B;
+        public InputAction @Sprint => m_Wrapper.m_PlayerAction_Sprint;
         public InputAction @Jump => m_Wrapper.m_PlayerAction_Jump;
+        public InputAction @Sneak => m_Wrapper.m_PlayerAction_Sneak;
         public InputActionMap Get() { return m_Wrapper.m_PlayerAction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -445,22 +457,28 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_PlayerActionActionsCallbackInterface != null)
             {
-                @B.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnB;
-                @B.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnB;
-                @B.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnB;
+                @Sprint.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnSprint;
+                @Sprint.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnSprint;
+                @Sprint.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnSprint;
                 @Jump.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnJump;
+                @Sneak.started -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnSneak;
+                @Sneak.performed -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnSneak;
+                @Sneak.canceled -= m_Wrapper.m_PlayerActionActionsCallbackInterface.OnSneak;
             }
             m_Wrapper.m_PlayerActionActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @B.started += instance.OnB;
-                @B.performed += instance.OnB;
-                @B.canceled += instance.OnB;
+                @Sprint.started += instance.OnSprint;
+                @Sprint.performed += instance.OnSprint;
+                @Sprint.canceled += instance.OnSprint;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Sneak.started += instance.OnSneak;
+                @Sneak.performed += instance.OnSneak;
+                @Sneak.canceled += instance.OnSneak;
             }
         }
     }
@@ -472,7 +490,8 @@ public partial class @ControllingPlayer : IInputActionCollection2, IDisposable
     }
     public interface IPlayerActionActions
     {
-        void OnB(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnSneak(InputAction.CallbackContext context);
     }
 }
