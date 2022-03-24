@@ -6,7 +6,7 @@ public class ManagePlayer : MonoBehaviour
 {
     Animator animator;
     ManageInput inputManager;
-    CameraManager cameraManager;
+    // CameraManager cameraManager;
     Locomotion playerLocomotion;
 
     public bool isInteracting;
@@ -15,7 +15,7 @@ public class ManagePlayer : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         inputManager = GetComponent<ManageInput>();
-        cameraManager = FindObjectOfType<CameraManager>();
+        // cameraManager = FindObjectOfType<CameraManager>();
         playerLocomotion = GetComponent<Locomotion>();
     }
 
@@ -31,7 +31,7 @@ public class ManagePlayer : MonoBehaviour
 
     private void LateUpdate()
     {
-        cameraManager.HandleAllCameraMovement();
+        // cameraManager.HandleAllCameraMovement();
         isInteracting = animator.GetBool("isInteracting");
 
         // Jumping
