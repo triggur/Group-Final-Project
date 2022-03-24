@@ -121,13 +121,13 @@ public class ManageInput : MonoBehaviour
     {
         if(currentlySneaking)
         {
-            Debug.Log("ENTER stealth");
+            // Debug.Log("ENTER stealth");
             playerLocomotion.isSneak = true;
             
         } 
         else
         {
-            Debug.Log("LEAVE stealth");
+            // Debug.Log("LEAVE stealth");
             playerLocomotion.isSneak = false;
         }
         playerLocomotion.HandleSneaking();
