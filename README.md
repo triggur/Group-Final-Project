@@ -10,9 +10,7 @@ The group project final for EMU Computer Game Programming.
 ## Current Controls:
 - Move   : WASD   -  Left Joystick
 - Camera : Mouse  -  Right Joystick
-- Sprint : Shift  -  East-Button
+- Sprint : Shift  -  North-Button
 - Jump   : Space  -  South-Button
+- Crouch : CTRL   -  East-Button
 
-
-
-Branch Test
