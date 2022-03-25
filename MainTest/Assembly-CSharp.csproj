@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{82A304C1-1333-9A45-F8B1-6C34D4C93AE9}</ProjectGuid>
+    <ProjectGuid>{CA0D5F0B-5FDE-2E11-4621-B3D8B0F3C1BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,13 +62,15 @@
     <Compile Include="Assets\Animation_Controls_Input\ControllingPlayer.cs" />
     <Compile Include="Assets\zzz_Documentation\SourceLinks.cs" />
     <Compile Include="Assets\Animation_Controls_Input\CameraManager.cs" />
+    <Compile Include="Assets\zzz_Documentation\GameControls.cs" />
     <Compile Include="Assets\Animation_Controls_Input\Locomotion.cs" />
     <Compile Include="Assets\Animation_Controls_Input\ManageAnimation.cs" />
     <Compile Include="Assets\Animation_Controls_Input\ManagePlayer.cs" />
-    <Compile Include="Assets\zzz_Documentation\GameControls.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\z_Import_Kenny_Characters\Animation-characters\License.txt" />
+    <None Include="Assets\z_Import_Skyboxes\Textures\Readme for Assigning.txt" />
+    <None Include="Assets\z_Import_Skyboxes\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

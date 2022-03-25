@@ -21,6 +21,9 @@ public class ManageInput : MonoBehaviour
     public bool b_input;
     public bool jump_input;
 
+    // Stealth
+    public bool currentlySneaking = false;
+
     public float cameraInputX;
     public float cameraInputY;
 
@@ -41,11 +44,14 @@ public class ManageInput : MonoBehaviour
             playerControls.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
 
             // Sprinting
-            playerControls.PlayerAction.B.performed += i => b_input = true;
-            playerControls.PlayerAction.B.canceled += i => b_input = false;
+            playerControls.PlayerAction.Sprint.performed += i => b_input = true;
+            playerControls.PlayerAction.Sprint.canceled += i => b_input = false;
 
             // Jumping
             playerControls.PlayerAction.Jump.performed += i => jump_input = true;
+
+            // Sneak - Crouch
+            playerControls.PlayerAction.Sneak.performed += i => FlipSneak();
         }
 
         playerControls.Enable();
@@ -61,6 +67,7 @@ public class ManageInput : MonoBehaviour
         HandleMovementInput();
         HandleSprintInput();
         HandleJumpingInput();
+        HandleSneak();
 
         // Handle Action Input
     }
@@ -96,5 +103,33 @@ public class ManageInput : MonoBehaviour
             jump_input = false;
             playerLocomotion.HandleJumping();
         }
+    }
+
+    private bool FlipSneak()
+    {
+        if(currentlySneaking)
+        {
+            currentlySneaking = false;
+        } else
+        {
+            currentlySneaking = true;
+        }
+        return currentlySneaking;
+    }
+
+    private void HandleSneak()
+    {
+        if(currentlySneaking)
+        {
+            // Debug.Log("ENTER stealth");
+            playerLocomotion.isSneak = true;
+            
+        } 
+        else
+        {
+            // Debug.Log("LEAVE stealth");
+            playerLocomotion.isSneak = false;
+        }
+        playerLocomotion.HandleSneaking();
     }
 }

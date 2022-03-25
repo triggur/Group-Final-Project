@@ -11,6 +11,7 @@ public class Locomotion : MonoBehaviour
     Vector3 moveDirection;
     Transform cameraObject;
     Rigidbody playerRigidBody;
+    CapsuleCollider capsuleCollider;
 
     [Header("Falling")]
     public float inAirTime;
@@ -23,8 +24,10 @@ public class Locomotion : MonoBehaviour
     public bool isSprinting;
     public bool isGrounded;
     public bool isJumping;
+    public bool isSneak;
 
     [Header("Movement Speeds")]
+    public float sneakSpeed = 2.5f;
     public float walkingSpeed = 1.5f;
     public float runningSpeed = 5;
     public float sprintingSpeed = 9;
@@ -41,6 +44,7 @@ public class Locomotion : MonoBehaviour
         animationManager = GetComponent<ManageAnimation>();
         inputManager = GetComponent<ManageInput>();
         playerRigidBody = GetComponent<Rigidbody>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
         cameraObject = Camera.main.transform;
     }
 
@@ -69,9 +73,13 @@ public class Locomotion : MonoBehaviour
         moveDirection.Normalize();
         moveDirection.y = 0;
 
-        if(isSprinting)
+        if(isSprinting && !isSneak)
         {
             moveDirection *= sprintingSpeed;
+        }
+        else if (!isSprinting && isSneak)
+        {
+            moveDirection *= sneakSpeed;
         }
         else
         {
@@ -180,6 +188,27 @@ public class Locomotion : MonoBehaviour
             Vector3 playerVelocity = moveDirection;
             playerVelocity.y = jumpingVelocity;
             playerRigidBody.velocity = playerVelocity;
+        }
+    }
+
+    // Method to handle sneaking animations
+    public void HandleSneaking()
+    {
+        if(!isSprinting && isGrounded && !isJumping)
+        {
+            if(isSneak)
+            {
+                animationManager.animator.SetBool("isSneaking", true);
+                capsuleCollider.height = 2.55f;
+                capsuleCollider.center = new Vector3(0, 1.7f, 0);
+            }
+            else
+            {
+                animationManager.animator.SetBool("isSneaking", false);
+                capsuleCollider.height = 3.4f;
+                capsuleCollider.center = new Vector3(0, 2.1f, 0);
+            }
+            
         }
     }
 }
