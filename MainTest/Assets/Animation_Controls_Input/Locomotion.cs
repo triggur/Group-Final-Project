@@ -11,6 +11,7 @@ public class Locomotion : MonoBehaviour
     Vector3 moveDirection;
     Transform cameraObject;
     Rigidbody playerRigidBody;
+    CapsuleCollider capsuleCollider;
 
     [Header("Falling")]
     public float inAirTime;
@@ -43,6 +44,7 @@ public class Locomotion : MonoBehaviour
         animationManager = GetComponent<ManageAnimation>();
         inputManager = GetComponent<ManageInput>();
         playerRigidBody = GetComponent<Rigidbody>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
         cameraObject = Camera.main.transform;
     }
 
@@ -197,10 +199,14 @@ public class Locomotion : MonoBehaviour
             if(isSneak)
             {
                 animationManager.animator.SetBool("isSneaking", true);
+                capsuleCollider.height = 2.55f;
+                capsuleCollider.center = new Vector3(0, 1.7f, 0);
             }
             else
             {
                 animationManager.animator.SetBool("isSneaking", false);
+                capsuleCollider.height = 3.4f;
+                capsuleCollider.center = new Vector3(0, 2.1f, 0);
             }
             
         }
